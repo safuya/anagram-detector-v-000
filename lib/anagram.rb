@@ -4,7 +4,11 @@ class Anagram
     @word = word
   end
 
-  def match(possibles)
-    
+  def match(candidates)
+    words.select { |candidate| is_anagram?(candidate) }
+  end
+
+  def is_anagram?(candidate)
+    candidate.chars.sort == @word.chars.sort
   end
 end
