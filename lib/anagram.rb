@@ -5,7 +5,7 @@ class Anagram
   end
 
   def match(candidates)
-    words.select { |candidate| is_anagram?(candidate) }
+    candidates.select { |candidate| is_anagram?(candidate) }
   end
 
   def is_anagram?(candidate)
